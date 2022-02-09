@@ -2,8 +2,8 @@ import {useState} from "react"
 
 export default function TodosButtons(props) {
 
-    const {onTodoEdit, id, onRemoveTodo, todo} = props;
-    const [isEditing, setIsEditing] = useState(false)
+    const {isEditing, setIsEditing, onTodoEdit, id, onRemoveTodo, todo} = props;
+    
     const [newContent, setNewContent] = useState(todo.content)
 
     return (
