@@ -1,7 +1,7 @@
 import Todos from "./Todos.js";
 import TodosHeader from "./TodosHeader/TodosHeader.js";
 import TodosFooter from "./TodosFooter/TodosFooter.js";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 export default function TodosWrapper() {
 
@@ -9,7 +9,6 @@ export default function TodosWrapper() {
     //States
 
     const [todos, setTodos] = useState([]);
-    const [isEditing, setIsEditing] = useState(false);
 
 
 
@@ -36,7 +35,7 @@ export default function TodosWrapper() {
     }
 
     function todoEdit(content, id){
-        const editedTodo = todos.find(todo => todo.id == id);
+        const editedTodo = todos.find(todo => todo.id === id);
         editedTodo.content = content
         setTodos([...todos]);
 
