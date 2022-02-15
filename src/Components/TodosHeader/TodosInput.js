@@ -7,12 +7,12 @@ export default function TodosInput(props) {
   const{onAddTodo} = props;
 
     return (
-      <>
-        <input placeholder="ADD YOUR TODO" value={inputValue} onChange={(e)=> setInputValue(e.target.value)} />
-        <button onClick={()=>{
+      <div className="pb-2 d-flex justify-content-center">
+        <input placeholder="ADD YOUR TODO" className=" mx-2 rounded" value={inputValue} onChange={(e)=> setInputValue(e.target.value)} />
+        <button className="btn btn-warning btn-sm" onClick={()=>{
           onAddTodo(inputValue);
           setInputValue("");
         }} >+</button>
-      </>
+      </div>
     );
 }

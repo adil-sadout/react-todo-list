@@ -1,14 +1,14 @@
 import Todo from "./Todo.js";
 
 export default function Todos(props) {
-    const {onTodoEdit, todos, onRemoveTodo} = props;
+    const {onTodoEdit, todos, onRemoveTodo, setTodosDoneCount, todosDoneCount} = props;
 
     return (
-      <div>
-        <ul>
+      <div className="grid ">
+        <ul className="list-group d-flex row">
         
         {
-            todos.map(todo => <Todo key={todo.id} onTodoEdit={onTodoEdit} todo={todo} onRemoveTodo={onRemoveTodo}/>)
+            todos.map(todo => <Todo key={todo.id}  setTodosDoneCount={setTodosDoneCount} todosDoneCount={todosDoneCount} onTodoEdit={onTodoEdit} todo={todo} onRemoveTodo={onRemoveTodo}/>)
         }
         </ul>
         

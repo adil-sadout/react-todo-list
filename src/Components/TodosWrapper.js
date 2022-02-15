@@ -9,10 +9,10 @@ export default function TodosWrapper() {
     //States
 
     const [todos, setTodos] = useState([]);
-
-
+    const [todosDoneCount, setTodosDoneCount] = useState(0)
 
     //*Functions
+
 
 
     function addTodo(e){
@@ -46,7 +46,6 @@ export default function TodosWrapper() {
 
     ///UseEffect
 
-
     
 
 
@@ -55,8 +54,8 @@ export default function TodosWrapper() {
     return (
         <>
             <TodosHeader onAddTodo={addTodo} />
-            <Todos onTodoEdit={todoEdit} todos={todos} onRemoveTodo={removeTodo}/>
-            <TodosFooter todos={todos} onClearTodos={clearTodos} />
+            <Todos setTodosDoneCount={setTodosDoneCount} todosDoneCount={todosDoneCount} onTodoEdit={todoEdit} todos={todos} onRemoveTodo={removeTodo}/>
+            <TodosFooter todosDoneCount={todosDoneCount} todos={todos} onClearTodos={clearTodos} />
         </>
     );
 }

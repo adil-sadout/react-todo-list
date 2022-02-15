@@ -8,7 +8,7 @@ export default function TodosHeader(props) {
 
     return (
         <div>
-            <h1>Todo List</h1>
+            <h1 className="pb-4">Todo List</h1>
             <TodosInput onAddTodo={onAddTodo} />
         </div>
     );
