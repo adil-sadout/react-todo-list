@@ -1,10 +1,14 @@
 
 
 export default function TodosClear(props) {
-  const {onClearTodos} = props
+  const {onClearTodos, setTodosDoneCount} = props
+  function clearTodos(){
+    setTodosDoneCount(0);
+    onClearTodos();
+  }
     return (
       <>
-        <button  className="btn btn-danger" onClick={onClearTodos} >Clear List</button>
+        <button  className="btn btn-danger" onClick={clearTodos} >Clear List</button>
       </>
     );
 }

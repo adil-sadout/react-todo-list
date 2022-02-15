@@ -3,14 +3,14 @@ import TodosProgress from "./TodosProgress.js";
 
 export default function TodosFooter(props) {
 
-  const {todos, onClearTodos, todosDoneCount} = props;
+  const {todos, onClearTodos, todosDoneCount, setTodosDoneCount} = props;
 
-
+  
 
   return (
     <div>
       <TodosProgress todos={todos} todosDoneCount={todosDoneCount} />
-      <TodosClear onClearTodos={onClearTodos} />
+      <TodosClear  setTodosDoneCount={setTodosDoneCount} onClearTodos={onClearTodos} />
     </div>
   );
 }

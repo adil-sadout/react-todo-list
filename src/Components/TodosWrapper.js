@@ -55,7 +55,7 @@ export default function TodosWrapper() {
         <>
             <TodosHeader onAddTodo={addTodo} />
             <Todos setTodosDoneCount={setTodosDoneCount} todosDoneCount={todosDoneCount} onTodoEdit={todoEdit} todos={todos} onRemoveTodo={removeTodo}/>
-            <TodosFooter todosDoneCount={todosDoneCount} todos={todos} onClearTodos={clearTodos} />
+            <TodosFooter todosDoneCount={todosDoneCount} setTodosDoneCount={setTodosDoneCount} todos={todos} onClearTodos={clearTodos} />
         </>
     );
 }
